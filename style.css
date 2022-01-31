@@ -1,0 +1,189 @@
+html{
+    font-family:sans-serif;
+    color:gray;
+}
+body{
+  width:100%;
+  margin:0;
+  background-color:aquamarine;
+}
+
+select:invalid { 
+  width:25.75vw;
+  height:6vh;
+  border: 2px solid grey;
+  border-radius:6px;
+  color: gray; 
+  }
+
+form{
+  background-color: white;
+  margin-left:20vw;
+  margin-top:10vh;
+  width:55vw;
+  height:50vh;
+ padding: 5vh 5vw 25vh 5vw;
+ border: 2px solid white;
+ border-radius:12px;
+
+}
+
+h1{
+  font-size:calc(1.25vw + 2.15vh);
+  text-align:center;
+}
+
+button{
+  margin-left:44.5vw;
+  color:white;
+  font-weight: bold;
+  border: 2px solid rgb(51, 51, 255);
+  border-radius: 4px;
+  margin-top: 3vh;
+  padding: 2vh 3vw 2vh 3vw;
+  background-color: rgb(51, 51, 255);
+}
+
+#container{
+   display: grid;
+   height:35%;
+  grid-template-columns: 26.5vw 26.5vw;
+  
+  grid-gap:15px;
+  
+}
+
+
+#ultChild{
+  height:15vh;
+  width:48vw;
+   border: 2px solid grey;
+  border-radius:6px;
+  text-align: start;
+  margin-top:3vh;
+  font-size:14px;
+  padding:2.5vw;
+}
+
+/*
+#ultChild{
+   grid-column: 1/span 2;
+  height:180%;
+  border: 2px solid grey;
+  border-radius:6px;
+}*/
+
+.a1:nth-child(odd){
+  grid-column:1/2;
+
+}
+.a1:nth-child(even){
+  grid-column:2/2
+}
+
+input{
+  width:25vw;
+  height:5vh;
+  border: 2px solid grey;
+  border-radius:6px;
+}
+
+select{
+  width:25.75vw;
+  height:6vh;
+  border: 2px solid grey;
+  border-radius:6px;
+}
+
+input::placeholder,textarea::placeholder{
+  font-weight:bold;
+  color: grey;
+}
+
+/*
+#inputNome:not(:focus):valid ~ #spanNome{
+ 
+  top:29vh;
+  
+  left: 27vw;
+  font-size:calc(0.7vw + 1vh);
+  opacity: 1;
+}*/
+
+#inputNome:focus::placeholder,#inputEmail:focus::placeholder,#inputTelefone:focus::placeholder{
+  opacity: 0;
+}
+
+
+#inputNome:focus:valid ~ #spanNome{
+ 
+  position: absolute;
+  pointer-events: none;
+  top:28vh;
+  display: block;
+  font-size:12px;
+  left:26vw;
+  opacity:1;
+  transition: 0.2s ease all;
+}
+
+
+button:hover{
+  cursor: pointer;
+}
+
+#inputTelefone:focus:valid ~ #spanTelefone{
+  /*top: 150px;*/
+   position: absolute;
+  pointer-events: none;
+  font-size:12px;
+  display: block;
+  transition: 0.2s ease all;
+  top:38.225vh;
+  
+  left: 26vw;
+  opacity: 1;
+}
+
+
+#inputEmail:focus:valid ~ #spanEmail{
+  position: absolute;
+  pointer-events: none;
+  top:28vh;
+  display: block;
+  font-size:12px;
+  left:54vw;
+  opacity:1;
+  transition: 0.2s ease all;
+}
+
+#spanNome {
+  display:none;
+  
+}
+
+
+#spanEmail {
+  display:none;
+  
+}
+
+#spanTelefone{
+   display:none;
+}
+
+/*
+input:nth-child(odd){
+  
+  height:5vh;
+  border: 2px solid grey;
+  border-radius:6px;
+}
+
+input:nth-child(even){
+  grid-column:2/2;
+  
+  height:5vh;
+  border: 2px solid grey;
+  border-radius:6px;
+}*/
